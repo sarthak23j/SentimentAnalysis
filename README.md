@@ -9,16 +9,14 @@ This project implements a sentiment analysis system using a fine-tuned LLaMA 3 m
 - Fine-tuned transformer model (LLaMA 3) for accurate sentiment classification
 - Real-time sentiment prediction via Tkinter interface
 - Batch processing of multiple texts
-- Web scraping of reviews (Amazon, Twitter) using Selenium
+- Web scraping of reviews (Twitter) using Selenium
 - Sentiment trend visualisation over time
-- Clean and modular backend powered by Flask
 
 ## 🧠 Technologies Used
 
 - Python 3
 - LLaMA 3 (via HuggingFace or LLaMA.cpp)
 - Tkinter (UI)
-- Flask (Backend API)
 - Pandas, NumPy, Matplotlib, Scikit-learn
 - Selenium (for data collection)
 
