@@ -28,7 +28,3 @@ This project implements a sentiment analysis system using a fine-tuned LLaMA 3 m
 - Achieved high accuracy, precision, and recall on multiple test sets.
 - Effectively handles contextual sentiment, sarcasm, and longer texts.
 - Lightweight and optimised for local deployment with quantised model.
-
-## 📄 License
-
-This project is licensed under the MIT License.
