@@ -1,4 +1,3 @@
-import ollama
 import pandas as pd
 import json
 import csv
@@ -20,18 +19,19 @@ from webdriver_manager.chrome import ChromeDriverManager
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS
 import nltk
+import ollama
 from nltk.corpus import stopwords
 import string
 
 
 def sentiment_analysis(menuno,strin):
     # Start menu
-    print("""
----- SENTIMENT ANALYSIS ----
-#1 - Analyse manual inputs
-#2 - Analyse dataset
-#3 - Enter product/brand name
-    """)
+#     print("""
+# ---- SENTIMENT ANALYSIS ----
+# #1 - Analyse manual inputs
+# #2 - Analyse dataset
+# #3 - Enter product/brand name
+#     """)
     # menu = int(input("Enter the function to use: "))
     menu = menuno
 
@@ -245,7 +245,7 @@ def sentiment_analysis(menuno,strin):
         plt.figure(figsize=(10, 5))
         plt.imshow(wordcloud, interpolation="bilinear")
         plt.axis("off")  # Hide axes
-        plt.title("Word Cloud of Product Reviews", fontsize=14)
+        plt.title("Word Cloud of Twitter Reviews", fontsize=14)
 
         plt.ion()
         plt.show(block=False)
