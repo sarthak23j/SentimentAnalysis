@@ -146,6 +146,7 @@ def sentiment_analysis(menuno,strin):
 
             options = webdriver.ChromeOptions()
             driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+            temp = Twarc2 + expansions + requests + json
 
             driver.get(l)
             time.sleep(3)

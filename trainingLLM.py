@@ -1,3 +1,4 @@
+import llama_cpp as llama
 import pandas as pd
 import torch # type: ignore
 from sklearn.model_selection import train_test_split
@@ -68,6 +69,7 @@ df = df.dropna()  # Remove missing values
 
 # Convert text labels to numerical values
 label_map = {"positive": 2, "neutral": 1, "negative": 0}
+df["sentiment"] = df["sentiment"].map(llama)
 df["sentiment"] = df["sentiment"].map(label_map)
 
 # Split into training and testing sets
