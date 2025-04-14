@@ -188,27 +188,29 @@ def sentiment_analysis(menuno,strin):
         exit()
 
     # LLM instructions
-    instruction = """
+    instruction = """ 
+    #INSTRUCTIONS : 
     Respond with only the given format below, and nothing else.
 
     The given content is a list of lists, where each element contains a number as the first value, 
     and the second value is the text that needs to be sentiment analyzed.
-    The result should be "Positive", "Negative", or "Neutral".
-    Try using "Neutral" as little as possible.
+    The result should be "Positive" or "Negative".
 
-    Also, mention the level of certainty from 0 to 1, with two decimal places (e.g., 0.34).
+    Also, mention the level of certainty from 0 to 1, with two decimal places (e.g., 0.84).
     For all reviews given, respond with only one result, which represents all the sentiments consolidated
 
     In the case where an invalid/empty list is provided, respond with "invalid data presented, please retry"
+
+    DO NOT INCLUDE THE START AND END IN YOUR RESPONSE
+    Note : make sure the certainty number is above 70%
+    I REPEAT: YOUR ONLY RESPONSE SHOULD BE THE SENTIMENT ANALYSIS RESULT IN THE SPECIFIED FORMAT GIVEN BELOW, AND NOTHING ELSE. EVERYTHING ELSE MESSES UP THE ENTIRE SYSTEM.
 
     **FORMAT START**
     Sentiment: [sentiment]  
     Certainty: [certainty]
     **FORMAT END**
 
-    DO NOT INCLUDE THE START AND END IN YOUR RESPONSE
-    Note : make sure the certainty number is above 70%
-    The user prompts are:
+    #INPUTS :
     """
 
     full_prompt = f"{instruction}, {user_inputs}"
