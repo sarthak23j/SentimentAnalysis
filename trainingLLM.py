@@ -15,7 +15,7 @@ df["sentiment_text"] = df["sentiment"].map({0: "Negative", 1: "Positive"})
 dataset = Dataset.from_pandas(df)
 
 # Load tokenizer and model
-model_name = "NousResearch/Llama-2-7b-chat-hf"
+model_name = "NousResearch/Llama-3-7b-chat-hf"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype=torch.float16)
 
